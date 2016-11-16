@@ -1,0 +1,10 @@
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twentyQuestions.csprojResolveAssemblyReference.cache
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twenty_questions.Form1.resources
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twenty_questions.Properties.Resources.resources
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twentyQuestions.csproj.GenerateResource.Cache
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\bin\Debug\twenty-questions.exe.config
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\bin\Debug\twenty-questions.exe
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\bin\Debug\twenty-questions.pdb
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twenty_questions.AddNewItem.resources
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twenty-questions.exe
+c:\users\v-muibra\documents\visual studio 2015\Projects\twenty-questions\twenty-questions\obj\Debug\twenty-questions.pdb
