@@ -25,10 +25,10 @@ namespace twenty_questions
         {
             root = new Question();
             root.question = "Is it hot?";
-            //root.yes = new Question();
-            //root.yes.question = "Is it black coffee?";
-            //root.no = new Question();
-           // root.no.question = "Is it 2% milk";
+            root.yes = new Question();
+            root.yes.question = "Is it black coffee?";
+            root.no = new Question();
+            root.no.question = "Is it 2% milk";
 
             current = root;
             questionLabel.Text = current.question;
