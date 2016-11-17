@@ -25,10 +25,10 @@ namespace twenty_questions
         {
             root = new Question();
             root.question = "Is it hot?";
-            root.yes = new Question();
-            root.yes.question = "Is it black coffee?";
-            root.no = new Question();
-            root.no.question = "Is it 2% milk";
+            //root.yes = new Question();
+            //root.yes.question = "Is it black coffee?";
+            //root.no = new Question();
+            //root.no.question = "Is it 2% milk";
 
             current = root;
             questionLabel.Text = current.question;
@@ -51,9 +51,12 @@ namespace twenty_questions
                 {
                     AddNewItem addNew = new AddNewItem();
                     addNew.ShowDialog();
-                }
-                    
-                     
+                }     
+            }
+            else
+            {
+                current = current.yes;
+                questionLabel.Text = current.question;
             }
         }
 
@@ -64,22 +67,35 @@ namespace twenty_questions
             // yes: Oh, then it's new. Go learn stuff.
             //      Do you want to play again?
 
-            AddNewItem add = new AddNewItem();
-            if (add.ShowDialog() == DialogResult.OK)
+            if (current.isLeaf())
             {
-
+                AddNewItem add = new AddNewItem();
+                if (add.ShowDialog() == DialogResult.OK)
+                {
+                    
+                }
+                current = root;
+                questionLabel.Text = current.question;
             }
-
+            else
+            {
+                current = current.no;
+                questionLabel.Text = current.question;
+            }
         }
 
         public void addQuestion(string newQ, string newA)
         {
 
-            string Q1 = newQ;
-            string A1 = newA;
+            string oldQ = current.question;
+            current.question = newQ;
+            current.no = new Question();
+            current.no.question = oldQ;
+            current.yes = new Question();
+            current.yes.question = newA;
 
-            string oldQ = current.no.question;
-            //current.question = 
+            questionLabel.Text = current.question;
+             
 
 
 
