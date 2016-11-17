@@ -18,7 +18,6 @@ namespace twenty_questions
             InitializeComponent();
         }
         
-
         Question root;
         Question current;
 
@@ -26,27 +25,36 @@ namespace twenty_questions
         {
             root = new Question();
             root.question = "Is it hot?";
-            root.yes = new Question();
-            root.yes.question = "Is it black coffe?";
-            root.no = new Question();
-            root.no.question = "Is it 2% milk";
+            //root.yes = new Question();
+            //root.yes.question = "Is it black coffee?";
+            //root.no = new Question();
+           // root.no.question = "Is it 2% milk";
 
             current = root;
             questionLabel.Text = current.question;
+            
         }
 
         private void yesButton_Click(object sender, EventArgs e)
         {
+
             // am I at a leaf?
             // yes: I rock!
             //      Do you want to play again?
             // no: ask the next question
 
-            if (MessageBox.Show("Do you want to play again?", "Twenty Questions",MessageBoxButtons.YesNo) == DialogResult.No)
+            if (current.isLeaf())
             {
-                this.Close();
+                if (MessageBox.Show("DOPE. Do you want to play again?", "Twenty Questions", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    this.Close();
+                else
+                {
+                    AddNewItem addNew = new AddNewItem();
+                    addNew.ShowDialog();
+                }
+                    
+                     
             }
-
         }
 
         private void noButton_Click(object sender, EventArgs e)
@@ -61,6 +69,26 @@ namespace twenty_questions
             {
 
             }
+
+        }
+
+        public void addQuestion(string newQ, string newA)
+        {
+
+            string Q1 = newQ;
+            string A1 = newA;
+
+            string oldQ = current.no.question;
+            //current.question = 
+
+
+
+            // MessageBox.Show(newQ);
+        } 
+        
+        // NEEDS TO BE REMOVED
+        private void questionLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -36,11 +36,12 @@
             // questionLabel
             // 
             this.questionLabel.AutoSize = true;
-            this.questionLabel.Location = new System.Drawing.Point(41, 66);
+            this.questionLabel.Location = new System.Drawing.Point(253, 82);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(70, 25);
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "label1";
+            this.questionLabel.Click += new System.EventHandler(this.questionLabel_Click);
             // 
             // yesButton
             // 
@@ -72,6 +73,7 @@
             this.Controls.Add(this.questionLabel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

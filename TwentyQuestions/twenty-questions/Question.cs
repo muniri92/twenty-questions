@@ -11,10 +11,17 @@ namespace twenty_questions
         public string question;
         public Question yes;
         public Question no;
+        public Question parent;
 
         public bool isLeaf()
         {
             return yes == null && no == null;
         }
+
+        //public Question(string _q)
+        //{
+        //    question = _q;
+        //} 
+
     }
 }
