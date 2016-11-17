@@ -17,11 +17,5 @@ namespace twenty_questions
         {
             return yes == null && no == null;
         }
-
-        //public Question(string _q)
-        //{
-        //    question = _q;
-        //} 
-
     }
 }

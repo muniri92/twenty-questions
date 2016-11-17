@@ -25,10 +25,13 @@ namespace twenty_questions
         {
             root = new Question();
             root.question = "Is it hot?";
-            //root.yes = new Question();
-            //root.yes.question = "Is it black coffee?";
-            //root.no = new Question();
-            //root.no.question = "Is it 2% milk";
+            root.yes = new Question();
+            root.yes.question = "Is it black coffee?";
+            root.no = new Question();
+            root.no.question = "Is it 2% milk";
+
+            root.no.parent = root;
+            root.yes.parent = root;
 
             current = root;
             questionLabel.Text = current.question;
@@ -46,7 +49,10 @@ namespace twenty_questions
             if (current.isLeaf())
             {
                 if (MessageBox.Show("DOPE. Do you want to play again?", "Twenty Questions", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    this.Close();
+                {
+                    current = root;
+                    questionLabel.Text = current.question;
+                }
                 else
                 {
                     AddNewItem addNew = new AddNewItem();
@@ -87,19 +93,38 @@ namespace twenty_questions
         public void addQuestion(string newQ, string newA)
         {
 
+            // Moving the Question not the Node
+            /*
             string oldQ = current.question;
             current.question = newQ;
             current.no = new Question();
             current.no.question = oldQ;
             current.yes = new Question();
             current.yes.question = newA;
-
             questionLabel.Text = current.question;
+
+            */
+
+            // Moving the Node not the Question
+
+            Question newNode = new Question();
+            newNode.question = newQ;
+            newNode.yes.question = newA;
+
+            Question temp = current;
+
+            newNode.parent = current.no.parent;
+            current.parent.no = newNode;
+
+            newNode.no = current;
+            newNode.yes.question = newA;
              
 
+            newNode.
 
 
-            // MessageBox.Show(newQ);
+
+            
         } 
         
         // NEEDS TO BE REMOVED

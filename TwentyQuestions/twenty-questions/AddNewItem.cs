@@ -24,9 +24,6 @@ namespace twenty_questions
                 (Application.OpenForms["Form1"] as Form1).addQuestion(this.questionTB.Text, this.answerTB.Text);
                 this.Close();
             }
-            
-
-
         }
-}
+    }
 }
